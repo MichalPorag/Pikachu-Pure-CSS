@@ -702,14 +702,43 @@ main > .ear2{
   }
 }
 
-
-
 a {
   font-size: max(2vmin, 1rem);
   margin-top: 2vmin;
-  color: var(--green-leave-1);
   text-decoration: none;
   font-family: 'Permanent Marker', cursive;
+  animation: scale-down 0.1s linear alternate forwards; 
+  background-color: var(--green-leave-1);
+  background-image: linear-gradient(-45deg, transparent 40%, var(--yellow) 40%, var(--yellow) 50%, transparent 50%);
+  background-size: 30px 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a:hover {
+ animation: scale-up 0.1s linear alternate forwards; 
+}
+
+@keyframes scale-up {    
+  from {
+    transform: scale(1);
+    background-position: -20% -20%;
+  }
+  to {
+    transform: scale(1.2);
+    background-position: 120% 120%;
+  }
+}
+
+@keyframes scale-down { 
+  from {
+    transform: scale(1.2);
+    background-position: 120% 120%;
+  }
+  to {
+    transform: scale(1);  
+    background-position: -20% -20%;
+  }
 }
 
 #github-button-container {
