@@ -707,18 +707,17 @@ a {
   margin-top: 2vmin;
   text-decoration: none;
   font-family: 'Permanent Marker', cursive;
-  animation: scale-down 0.1s linear alternate forwards; 
   background-color: var(--green-leave-1);
   background-image: linear-gradient(-45deg, transparent 40%, var(--yellow) 40%, var(--yellow) 50%, transparent 50%);
   background-size: 30px 100%;
   background-position: -20% -20%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: scale-down 0.1s linear alternate forwards; 
 }
 
 a:hover {
- animation: scale-up 0.1s linear alternate forwards; 
- animation: lightning 0.2s linear alternate forwards;
+ animation: scale-up 0.3s linear alternate forwards; 
 }
 
 #github-button-container {
@@ -742,10 +741,22 @@ a:hover {
 
 
 @keyframes scale-up {    
-  from {
+  0% {
     transform: scale(1);
   }
-  to {
+  20% {
+    transform: scale(1.2);
+  }
+  40% {
+    background-position: -20% -20%;
+    transform: scale(1.2);
+  }
+  70% {
+    background-position: 120% 120%;
+    transform: scale(1.2);
+  }
+  100% {
+    background-position: -20% -20%;    
     transform: scale(1.2);
   }
 }
