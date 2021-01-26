@@ -703,8 +703,8 @@ main > .ear2{
 }
 
 a {
-  font-size: max(2vmin, 4rem);
-  margin-top: max(2vmin, 4rem);
+  font-size: max(2vmin, 3rem);
+  margin-top: max(2vmin, 3rem);
   text-decoration: none;
   font-family: 'Permanent Marker', cursive;
   animation: scale-down 0.1s linear alternate forwards; 
