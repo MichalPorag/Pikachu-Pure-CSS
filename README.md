@@ -1,6 +1,6 @@
 # Pikachu-Pure-CSS
 
-![Pure CSS Pikachu](Pikachu Pure CSS.mov)
+![Pure CSS Pikachu](PikachuPureCSS.gif)
 
 Link to project: [Pure CSS Pikachu](https://brave-feynman-54ff26.netlify.app/)
 
