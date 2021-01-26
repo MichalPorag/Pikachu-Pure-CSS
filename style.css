@@ -491,7 +491,6 @@ main > * {
   z-index: 6;
   border: 1vmin solid var(--black);
 }
-
  
 main:hover > .head{
   animation: eye-hover-animation 50ms forwards;
@@ -563,7 +562,6 @@ main:hover > .ear2{
     transform: translateX(-60%) translateY(-64%) rotate(90deg);
   }
 }
-
 
 main > .head{
   animation: eye-animation 300ms forwards;
@@ -711,4 +709,18 @@ a {
   margin-top: 2vmin;
   color: var(--green-leave-1);
   text-decoration: none;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#github-button-container {
+  width: 200px;
+  height: 35px;
+  background-color: #22262A;
+  transform: rotate(-45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: -60px;
 }
