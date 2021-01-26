@@ -703,42 +703,22 @@ main > .ear2{
 }
 
 a {
-  font-size: max(2vmin, 3rem);
-  margin-top: max(2vmin, 3rem);
+  font-size: max(2vmin, 2rem);
+  margin-top: 2vmin;
   text-decoration: none;
   font-family: 'Permanent Marker', cursive;
   animation: scale-down 0.1s linear alternate forwards; 
   background-color: var(--green-leave-1);
   background-image: linear-gradient(-45deg, transparent 40%, var(--yellow) 40%, var(--yellow) 50%, transparent 50%);
   background-size: 30px 100%;
+  background-position: -20% -20%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 a:hover {
  animation: scale-up 0.1s linear alternate forwards; 
-}
-
-@keyframes scale-up {    
-  from {
-    transform: scale(1);
-    background-position: -20% -20%;
-  }
-  to {
-    transform: scale(1.2);
-    background-position: 120% 120%;
-  }
-}
-
-@keyframes scale-down { 
-  from {
-    transform: scale(1.2);
-    background-position: 120% 120%;
-  }
-  to {
-    transform: scale(1);  
-    background-position: -20% -20%;
-  }
+ animation: lightning 0.2s linear alternate forwards;
 }
 
 #github-button-container {
@@ -752,4 +732,41 @@ a:hover {
   position: absolute;
   top: 20px;
   left: -60px;
+  background-image: linear-gradient(-45deg, transparent 40%, var(--yellow) 40%, var(--yellow) 50%, transparent 50%);
+  background-size: 30px 100%;
+}
+
+#github-button-container:hover {
+ animation: lightning 0.2s linear alternate forwards; 
+}
+
+
+@keyframes scale-up {    
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes scale-down { 
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);  
+  }
+}
+
+@keyframes lightning {    
+  0% {
+    background-position: -20% -20%;
+  }
+  50% {
+    background-position: 120% 120%;
+  }
+  100% {
+    background-position: -20% -20%;
+  }
 }
