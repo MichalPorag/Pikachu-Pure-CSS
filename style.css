@@ -1,0 +1,714 @@
+:root {
+  --yellow: #FFEB91;
+  --shade-yellow: #EAB446;
+  --red: #E15050;
+  --red-cheek: #E25150;
+  --black: #2C2A24;
+  --green: #9ccead;
+  --green-leave-1: #2EB492;
+  --green-leave-2: #A1CE55;
+  --yellow-2: #F4EFC4;
+  --orange: #E8A04D;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 2;
+  background-repeat: no-repeat;
+}
+
+body {
+  height: 100vh;
+  background-color: #9ccead;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+ --size: 52.5vmin;
+  
+  width: calc(var(--size) - 0.7%);
+  height: var(--size);
+  border-radius: 50%;
+  background-color: var(--green);
+  background-image: 
+    radial-gradient(ellipse, var(--orange) 40%, transparent 40.2%),
+    linear-gradient(var(--green) 40%, transparent 40.2%),
+    radial-gradient(ellipse, 
+      var(--black) 65%,
+      var(--black) 65.2%);
+  background-position: 
+    16% 7%,
+    100% 0%,
+    0% 0%;
+  background-size: 
+    20% 30%,
+    70% 100%,
+    100% 100%;
+}
+
+main > * {
+  border: 1.5vmin solid var(--black);
+  position: relative;
+}
+
+.tail {
+  width: 41%;
+  height: 50%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 22% 100%);
+  background-image: 
+    linear-gradient(var(--black) 60%, transparent 60.2%),
+    linear-gradient(var(--black) 60%, transparent 60.2%),
+    radial-gradient(ellipse, var(--black) 60%, transparent 60.2%),
+    radial-gradient(ellipse,
+      transparent 20%, 
+      var(--black) 20.2%, 
+      var(--black) 23.8%,
+      transparent 24%),
+    radial-gradient(ellipse,
+      transparent 61.5%, 
+      var(--black) 61.7%, 
+      var(--black) 65.8%,
+      transparent 66%),
+    linear-gradient(transparent 60%, var(--green) 60.2%),
+    radial-gradient(ellipse,
+      transparent 20%, 
+      var(--shade-yellow) 20.2%),
+    radial-gradient(ellipse, 
+      transparent 18%, 
+      var(--yellow) 18.2%, 
+      var(--yellow) 65.8%,
+      transparent 66%),
+    radial-gradient(ellipse, 
+      var(--yellow) 65.8%,
+      transparent 66%);
+  background-position: 
+    55% 83%,
+    30% 79%,
+    53.5% 79%,
+    62.5% -6%,
+    80% 10%,
+    25% 100%,
+    50% 58%,
+    60% -8%,
+    -50% 0%;
+  background-size: 
+    7% 10%,
+    34% 9%,
+    12% 10%,
+    350% 200%,
+    350% 200%,
+    40% 70%,
+    350% 400%,
+    250% 180%,
+    70% 40%;
+  border-radius: 5%;
+  top: 10%;
+  left: -11%;
+  z-index: 2;
+  border: 0;
+}
+
+.tail::after {
+  width: 8%;
+  height: 78%;
+  position: absolute;
+  left: 1.6vmin;
+  overflow: hidden;
+  background-color: var(--black);
+  content: "";
+  transform: rotate(-10deg);
+  border-radius: 2vmin;
+}
+
+.body {
+  width: 62%;
+  height: 67%;
+  background-color: var(--yellow);
+  top: calc(-50% + 32.7%);
+  left: 16%;
+  border-radius: 50%;
+  z-index: 3;
+  background-image: 
+    conic-gradient(ellipse, var(--red) 60%, transparent 60.2%);
+  background-position: 
+    0% 50%;
+  background-size: 
+    20% 10%;
+}
+
+.head {
+  width: 63%;
+  height: 55%;
+  background-color: var(--yellow);
+  top: calc(-150% + 33.5%);
+  left: 18%;
+  border-radius: 110% 110% 100% 85% / 125% 125% 100% 80%;
+  z-index: 4;
+}
+
+.head {
+    background-image: 
+    /*cheeks*/
+    radial-gradient(ellipse, var(--red-cheek) 40%, transparent 41%),
+    radial-gradient(ellipse, var(--red-cheek) 40%, transparent 41%),
+    /*shadow*/
+    radial-gradient(ellipse, transparent 40%, var(--shade-yellow) 40.2%),
+    /*eyes*/
+    radial-gradient(ellipse, var(--yellow) 40%, transparent 41%),
+    radial-gradient(ellipse, var(--black) 40%, transparent 41%),
+    radial-gradient(ellipse, var(--black) 40%, transparent 41%),
+    /*nose*/
+    radial-gradient(ellipse, var(--black) 40%, transparent 41%),
+      radial-gradient(ellipse, var(--black) 40%, transparent 41%),
+    /*mouth*/
+    radial-gradient(ellipse, var(--yellow) 40%, transparent 41%),
+    radial-gradient(ellipse, var(--yellow) 40%, transparent 41%),
+    radial-gradient(ellipse, var(--yellow) 40%, transparent 41%),
+    radial-gradient(ellipse, var(--black) 40%, transparent 41%),
+    radial-gradient(ellipse, var(--black) 40%, transparent 41%);
+  background-position: 
+    /*cheeks*/
+    -35% 95%,
+    105% 115%,
+    /*shadow*/
+    45% 65%,
+    /*eyes*/
+/*         76% 73%, */
+    76% 80%,
+    17% 50%,
+/*     73% 65%, */
+    65% 51%,
+    /*nose*/
+    41% 62%,
+    41.5% 63%,
+    /*mouth*/
+    42% 62%,
+    35% 67%,
+    47% 67%,
+    45% 70%,
+    35% 70%;
+  background-size: 
+    /*cheeks*/
+    45% 55%,
+    45% 55%,
+    /*shadow*/
+    300% 230%,
+    /*eyes*/
+    26% 33%,
+    20% 30%,
+/*     23% 30%, */
+    20% 30%,
+    /*nose*/
+    10% 7%,
+    5% 3%,
+    /*mouth*/
+    20% 25%,
+    18% 20%,
+    20% 20%,
+    25% 25%,
+    20% 20%;
+}
+
+.ear1 {
+  width: 50%;
+  height: 18%;
+  background-image: radial-gradient(ellipse, var(--yellow) 40%, var(--black) 40.2%);
+  background-position: 0 65%;
+  background-size: 130% 430%;
+  top: calc(-150% + -35%);
+  left: -4%;
+  transform: rotate(50deg);
+  border-radius: 0% 100% 12% 100% / 0% 100% 0% 100%;
+  z-index: 2;
+}
+
+.ear2 {
+  width: 50%;
+  height: 19%;
+  background-image: radial-gradient(ellipse, var(--yellow) 40%, var(--black) 40.2%);
+  background-position: 20% 40%;
+  background-size: 180% 430%;
+  top: calc(-150% + -47.5%);
+  left: 68%;
+  border-radius: 80% 20% 100% 0% / 100% 0% 50% 0%;
+  transform: rotate(140deg);
+  border-right: 0;
+  z-index: 4;
+}
+
+.ear2::after {
+  content: "";
+  position: absolute;
+  width: 9%;
+  height: 50%;
+  top: 0%;
+  left: 95%;
+  background-color: var(--yellow);
+}
+
+.hand {
+  width: 24%;
+  height: 38%;
+  top: calc(-250% + 77%);
+  left: 35%;
+  transform: rotate(65deg);
+  border-radius: 45% 35% 20% 20% / 100% 80% 20% 20%;
+  border-bottom: 0;
+  border: 0;
+  z-index: 5;
+  background-image: 
+    radial-gradient(var(--black) 52%, transparent 52.2%),
+    radial-gradient(var(--black) 52%, transparent 52.2%),
+    radial-gradient(transparent 40%, var(--shade-yellow) 40.5%, var(--shade-yellow) 52%, transparent 52.5%),
+    radial-gradient(var(--yellow) 40.5%, var(--yellow) 52%, var(--black) 52.2%, var(--black) 62%, transparent 62.5%);
+  background-position: 
+    35% -3%,
+    55% -3%,
+    60% 63%,
+    60% 30%;
+  background-size: 
+    20% 13%,
+    24% 13%,
+    220% 280%,
+    100% 170%;
+}
+
+.leg1 {
+  width: 35%;
+  height: 32%;
+  top: calc(-250% + 68%);
+  left: 35%;
+  transform: rotate(65deg);
+  border-radius: 50% 50% 30% 50% / 50% 50% 50% 30%;
+  z-index: 5;
+  border: 0;
+  background-image: 
+    radial-gradient(transparent 50%, var(--black) 50.5%, var(--black) 60.5%, transparent 60.7%),
+    radial-gradient(var(--yellow) 40%, var(--shade-yellow) 40.5%, var(--shade-yellow) 52%, transparent 52.5%);
+  background-position: 
+    66% 20%,
+    83% 35%;
+  background-size: 
+    120% 150%,
+    240% 250%;
+}
+
+.leg2 {
+  width: 11%;
+  height: 26%;
+  top: calc(-300% + 86%);
+  left: 57%;
+  transform: rotate(-6deg);
+  border-radius: 64% 36% 46% 54% / 52% 24% 76% 48%;
+  z-index: 5;
+  border-width: 0.8vmin;
+  background-image: 
+    radial-gradient(var(--shade-yellow) 50%, transparent 50.5%),
+    radial-gradient(var(--yellow) 50%, transparent 50.5%),
+    radial-gradient(var(--yellow) 50%, transparent 50.5%),
+    radial-gradient(var(--shade-yellow)49.8%, var(--black) 50%, var(--black) 60%, transparent 60.5%),
+    radial-gradient(var(--yellow) 57%, transparent 25.5%),
+    radial-gradient(var(--black) 57%, transparent 25.5%),
+    radial-gradient(var(--yellow) 57%, transparent 25.5%),
+    radial-gradient(var(--shade-yellow) 57%, transparent 25.5%),
+    radial-gradient(var(--shade-yellow) 70%, transparent 70.2%);
+  background-position: 
+    70% 105%,
+    250% 60%,
+    -40% 15%,
+    -10% 10%,
+    -250% 10%,
+    -150% 2%,
+    -140% -10%,
+    -20% 20%,
+    70% -30%;
+  background-size: 
+    100% 30%,
+    93% 70%,
+    140% 80%,
+    150% 150%,
+    95% 25%,
+    95% 25%,
+    95% 25%,
+    30% 30%,
+    100% 100%;
+}
+
+.leg2:after {
+  width: 45%;
+  height: 30%;
+  position: absolute;
+  top: 9.2vmin;
+  overflow: hidden;
+  background-color: var(--shade-yellow);
+  content: "";
+  transform: rotate(-90deg);
+}
+
+.leave1 {
+  width: 11vmin;
+  height: 20vmin;
+  background-color: var(--green-leave-1);
+  position: relative;
+  top: -257.5%;
+  z-index: 10;
+  transform: rotate(-7deg);
+  border-radius: 0% 100% 0% 100% / 0% 58% 41% 100%;
+  border: 1.5vmin solid var(--black);
+}
+
+.leave2 {
+  width: 10vmin;
+  height: 10vmin;
+  background-color: var(--green-leave-2);
+  position: relative;
+  top: -270%; 
+  left: 17%;
+  z-index: 11;
+  transform: rotate(30deg);
+  border-radius: 0% 100% 78% 65% / 0% 85% 74% 100%;
+  border: 1.5vmin solid var(--black);
+}
+
+.leave3 {
+  width: 13vmin;
+  height: 15vmin;
+  background-color: var(--green-leave-1);
+  position: relative;
+  top: -320%;
+  left: 75%;
+  z-index: 11;
+  transform: rotate(-158deg);
+  border-radius: 0% 100% 78% 65% / 0% 85% 74% 100%;
+  border: 1.5vmin solid var(--black);
+}
+
+.leave4 {
+  width: 12vmin;
+  height: 12vmin;
+  background-color: var(--green-leave-2);
+  position: relative;
+  top: -360%; 
+  left: 76.1%;
+  z-index: 3;
+  transform: rotate(80deg);
+  border-radius: 0% 100% 78% 65% / 0% 85% 74% 100%;
+  border: 1.5vmin solid var(--black);
+}
+
+.ketchup1 {
+  width: 33%;
+  height: 55%;
+  border: 0;
+  top: -377%;
+  left: 57%;
+  transform: rotate(3deg);
+  border-top: 0;
+  z-index: 4;
+  background-image: 
+    radial-gradient(ellipse, transparent 40%, var(--black) 40.2%, var(--black) 60%, transparent 60.2%),
+    radial-gradient(ellipse, var(--red) 60%, var(--black) 60.2%, var(--black) 69.8%, transparent 70%);
+  background-position: 
+    -40% -23%,
+    10% 100%;
+  background-size: 
+    55% 40%,
+    100% 85%;
+}
+
+.ketchup1::after {
+  width: 86%;
+  height: 40%;
+  content: "";
+  position: absolute;
+  border: 0;
+  top: 42%;
+  left: 6%;
+  border-top: 0;
+  z-index: 6;
+  background-image: 
+    radial-gradient(ellipse, var(--yellow-2) 60%, var(--black) 60.2%, var(--black) 68%,transparent 68.2%);
+  background-position: 
+    50% 80%;
+  background-size: 
+    150% 100%; 
+  background-repeat: no-repeat;
+  border-radius: 35%;
+}
+
+.ketchup2 {
+  width: 15%;
+  height: 15%;
+  background-color: var(--red);
+  top: calc(-500% + 70%);
+  left: 65%;
+  transform: rotate(45deg);
+  border-radius: 23% 100% 0% 45% / 0% 61% 0% 100%;
+  border-bottom: 0;
+  border-right: 0;
+  z-index: 4;
+}
+
+.ketchup3 {
+  width: 11%;
+  height: 13%;
+  background-color: var(--red);
+  top: calc(-500% + 46%);
+  left: 67%;
+  border-radius: 20% 20% 0% 0% / 100% 100% 0% 0%;
+  border-bottom: 0;
+  z-index: 4;
+}
+
+.ketchup3::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background-color: white;
+  top: -50%;
+  left: -57%;
+  border-radius: 10% 10% 0% 0% / 100% 100% 0% 0%;
+  z-index: 6;
+  border: 1.5vmin solid var(--black);
+  border-bottom: 1vmin solid var(--black);
+}
+
+.ketchup3::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background-color: white;
+  top: -110%;
+  left: -180%;
+  border-radius: 0% 80% 0% 100% / 20% 100% 0% 100% ;
+  z-index: 6;
+  border: 1vmin solid var(--black);
+}
+
+ 
+main:hover > .head{
+  animation: eye-hover-animation 50ms forwards;
+}
+
+main:hover > .ear1{
+  animation: ear1-hover-animation 100ms forwards;
+}
+
+main:hover > .ear2{
+  animation: ear2-hover-animation 100ms forwards;
+}
+
+@keyframes eye-hover-animation {
+  to {
+    background-position: 
+      /*cheeks*/
+      -35% 95%,
+      105% 115%,
+      /*shadow*/
+      45% 65%,
+      /*eyes*/
+      76% 73%,
+/*       76% 80%, */
+      17% 50%,
+      73% 65%,
+/*       65% 51%, */
+      /*nose*/
+      41% 62%,
+      41.5% 63%,
+      /*mouth*/
+      42% 62%,
+      35% 67%,
+      47% 67%,
+      45% 70%,
+      35% 70%;
+    background-size: 
+      /*cheeks*/
+      45% 55%,
+      45% 55%,
+      /*shadow*/
+      300% 230%,
+      /*eyes*/
+      26% 33%,
+      20% 30%,
+      23% 30%,
+/*       20% 30%, */
+      /*nose*/
+      10% 7%,
+      5% 3%,
+      /*mouth*/
+      20% 25%,
+      18% 20%,
+      20% 20%,
+      25% 25%,
+      20% 20%;
+    border-radius: 110% 115% 100% 85% / 125% 125% 100% 80%;
+  }
+}
+
+@keyframes ear1-hover-animation {
+  to {
+    transform: translateX(30%) translateY(-33%) rotate(90deg);
+  }
+}
+
+@keyframes ear2-hover-animation {
+  to {
+    transform: translateX(-60%) translateY(-64%) rotate(90deg);
+  }
+}
+
+
+main > .head{
+  animation: eye-animation 300ms forwards;
+}
+
+main > .ear1{
+  animation: ear1-animation 300ms forwards;
+}
+
+main > .ear2{
+  animation: ear2-animation 300ms forwards;
+}
+
+@keyframes eye-animation {
+  from {
+    background-position: 
+      /*cheeks*/
+      -35% 95%,
+      105% 115%,
+      /*shadow*/
+      45% 65%,
+      /*eyes*/
+      76% 73%,
+/*       76% 80%, */
+      17% 50%,
+      73% 65%,
+/*       65% 51%, */
+      /*nose*/
+      41% 62%,
+      41.5% 63%,
+      /*mouth*/
+      42% 62%,
+      35% 67%,
+      47% 67%,
+      45% 70%,
+      35% 70%;
+    background-size: 
+      /*cheeks*/
+      45% 55%,
+      45% 55%,
+      /*shadow*/
+      300% 230%,
+      /*eyes*/
+      26% 33%,
+      20% 30%,
+      23% 30%,
+/*       20% 30%, */
+      /*nose*/
+      10% 7%,
+      5% 3%,
+      /*mouth*/
+      20% 25%,
+      18% 20%,
+      20% 20%,
+      25% 25%,
+      20% 20%;
+    border-radius: 110% 115% 100% 85% / 125% 125% 100% 80%;
+  }
+  to {
+    background-image: 
+    /*cheeks*/
+    radial-gradient(ellipse, var(--red-cheek) 40%, transparent 41%),
+    radial-gradient(ellipse, var(--red-cheek) 40%, transparent 41%),
+    /*shadow*/
+    radial-gradient(ellipse, transparent 40%, var(--shade-yellow) 40.2%),
+    /*eyes*/
+    radial-gradient(ellipse, var(--yellow) 40%, transparent 41%),
+    radial-gradient(ellipse, var(--black) 40%, transparent 41%),
+    radial-gradient(ellipse, var(--black) 40%, transparent 41%),
+    /*nose*/
+    radial-gradient(ellipse, var(--black) 40%, transparent 41%),
+      radial-gradient(ellipse, var(--black) 40%, transparent 41%),
+    /*mouth*/
+    radial-gradient(ellipse, var(--yellow) 40%, transparent 41%),
+    radial-gradient(ellipse, var(--yellow) 40%, transparent 41%),
+    radial-gradient(ellipse, var(--yellow) 40%, transparent 41%),
+    radial-gradient(ellipse, var(--black) 40%, transparent 41%),
+    radial-gradient(ellipse, var(--black) 40%, transparent 41%);
+  background-position: 
+    /*cheeks*/
+    -35% 95%,
+    105% 115%,
+    /*shadow*/
+    45% 65%,
+    /*eyes*/
+/*         76% 73%, */
+    76% 80%,
+    17% 50%,
+/*     73% 65%, */
+    65% 51%,
+    /*nose*/
+    41% 62%,
+    41.5% 63%,
+    /*mouth*/
+    42% 62%,
+    35% 67%,
+    47% 67%,
+    45% 70%,
+    35% 70%;
+  background-size: 
+    /*cheeks*/
+    45% 55%,
+    45% 55%,
+    /*shadow*/
+    300% 230%,
+    /*eyes*/
+    26% 33%,
+    20% 30%,
+/*     23% 30%, */
+    20% 30%,
+    /*nose*/
+    10% 7%,
+    5% 3%,
+    /*mouth*/
+    20% 25%,
+    18% 20%,
+    20% 20%,
+    25% 25%,
+    20% 20%;
+  }
+}
+
+@keyframes ear1-animation {
+  from {
+    transform: translateX(30%) translateY(-33%) rotate(90deg);
+  }
+  to {
+    transform: translateX(0%) translateY(0%) rotate(50deg);
+  }
+}
+
+@keyframes ear2-animation {
+  from {
+    transform: translateX(-60%) translateY(-64%) rotate(90deg);
+  }
+  to {
+    transform: translateX(-15%) translateY(-20%) rotate(140deg);
+  }
+}
+
+
+
+a {
+  font-size: max(2vmin, 1rem);
+  margin-top: 2vmin;
+  color: var(--green-leave-1);
+  text-decoration: none;
+}
