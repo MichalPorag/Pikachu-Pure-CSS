@@ -702,7 +702,7 @@ main > .ear2{
   }
 }
 
-a {
+#credit {
   font-size: max(2vmin, 2rem);
   margin-top: 2vmin;
   text-decoration: none;
@@ -716,29 +716,9 @@ a {
   animation: scale-down 0.1s linear alternate forwards; 
 }
 
-a:hover {
+#credit:hover {
  animation: scale-up 0.3s linear alternate forwards; 
 }
-
-#github-button-container {
-  width: 200px;
-  height: 35px;
-  background-color: #22262A;
-  transform: rotate(-45deg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 20px;
-  left: -60px;
-  background-image: linear-gradient(-45deg, transparent 40%, var(--yellow) 40%, var(--yellow) 50%, transparent 50%);
-  background-size: 30px 100%;
-}
-
-#github-button-container:hover {
- animation: lightning 0.2s linear alternate forwards; 
-}
-
 
 @keyframes scale-up {    
   0% {
@@ -770,14 +750,42 @@ a:hover {
   }
 }
 
-@keyframes lightning {    
+#github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
   0% {
-    background-position: -20% -20%;
+      transform: rotate(0deg);
   }
-  50% {
-    background-position: 120% 120%;
+
+  20% {
+      transform: rotate(-25deg);
   }
+
+  40% {
+      transform: rotate(10deg);
+  }
+
+  60% {
+      transform: rotate(-25deg);
+  }
+
+  80% {
+      transform: rotate(10deg);
+  }
+
   100% {
-    background-position: -20% -20%;
+      transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+      animation: none;
+  }
+
+  .github-corner .octo-arm {
+      animation: octocat-wave 560ms ease-in-out;
   }
 }
